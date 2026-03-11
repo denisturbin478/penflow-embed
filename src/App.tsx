@@ -2,7 +2,6 @@ import { Penflow } from 'penflow/react'
 
 function App() {
   const params = new URLSearchParams(window.location.search)
-
   const text = params.get('text') ?? 'Hello World'
   const color = params.get('color') ?? '#000000'
   const bgColor = params.get('bgColor') ?? 'transparent'
@@ -10,13 +9,24 @@ function App() {
   const fontUrl = params.get('fontUrl') ?? '/fonts/BrittanySignature.ttf'
 
   return (
-    <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '40px 20px 80px 20px', backgroundColor: bgColor }}>
-      <Penflow
-        text={text}
-        color={color}
-        speed={speed}
-        fontUrl={fontUrl}
-      />
+    <div style={{
+      width: '100vw',
+      height: '100vh',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: bgColor,
+      boxSizing: 'border-box',
+      padding: '40px',
+    }}>
+      <div style={{ width: 'fit-content', maxWidth: '90vw', overflow: 'visible' }}>
+        <Penflow
+          text={text}
+          color={color}
+          speed={speed}
+          fontUrl={fontUrl}
+        />
+      </div>
     </div>
   )
 }
