@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div style={{ width: '100vw', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px 5% 80px 5%', backgroundColor: bgColor, overflow: 'visible' }}>
-      <div style={{ overflow: 'visible', display: 'flex', justifyContent: 'center', width: '100%' }}>
+      <div style={{ overflow: 'visible', width: 'fit-content' }}>
         <Penflow
           text={text}
           color={color}
