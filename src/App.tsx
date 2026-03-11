@@ -9,12 +9,14 @@ function App() {
   const fontUrl = params.get('fontUrl') ?? '/fonts/BrittanySignature.ttf'
 
   return (
-    <Penflow
-      text={text}
-      color={color}
-      speed={speed}
-      fontUrl={fontUrl}
-    />
+    <div style={{ alignItems: 'center', justifyContent: 'center', padding: '40px 20px 80px 20px' }}>
+      <Penflow
+        text={text}
+        color={color}
+        speed={speed}
+        fontUrl={fontUrl}
+      />
+    </div>
   )
 }
 
