@@ -5,6 +5,7 @@ function App() {
   const text = params.get('text') ?? 'Hello World'
   const color = params.get('color') ?? '#000000'
   const bgColor = params.get('bgColor') ?? 'transparent'
+  const size = params.get('size') ?? '80'
   const speed = params.get('speed') != null ? Number(params.get('speed')) : undefined
   const fontUrl = params.get('fontUrl') ?? '/fonts/BrittanySignature.ttf'
 
@@ -23,6 +24,7 @@ function App() {
         <Penflow
           text={text}
           color={color}
+          size={Number(size)}
           speed={speed}
           fontUrl={fontUrl}
         />
