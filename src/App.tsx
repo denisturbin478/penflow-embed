@@ -11,14 +11,16 @@ function App() {
   const fontUrl = params.get('fontUrl') ?? '/fonts/BrittanySignature.ttf'
 
   return (
-    <div style={{ width: '100vw', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '40px 20px 80px 20px', backgroundColor: bgColor }}>
-      <Penflow
-        text={text}
-        color={color}
-        size={Number(size)}
-        speed={speed}
-        fontUrl={fontUrl}
-      />
+    <div style={{ width: '100vw', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px 5% 80px 5%', backgroundColor: bgColor, overflow: 'visible' }}>
+      <div style={{ overflow: 'visible', display: 'flex', justifyContent: 'center', width: '100%' }}>
+        <Penflow
+          text={text}
+          color={color}
+          size={Number(size)}
+          speed={speed}
+          fontUrl={fontUrl}
+        />
+      </div>
     </div>
   )
 }
